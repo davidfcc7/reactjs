@@ -1,7 +1,13 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import axios from 'axios';
+import "bootstrap/dist/css/bootstrap.min.css";
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faEdit, faTrashAlt} from '@fortawesome/free-solid-svg-icons';
+import {Modal, ModalBody, ModalFooter, ModalHeader} from 'reactstrap'
 
+const url = "https://crudcrud.com/api/d195aa0edbc346b6a0dd99815dd0d959";
 
 const mascotas = [
   {id: 1, nombre: 'Toby', edad: 2, especie: 'Gato'},
@@ -14,6 +20,14 @@ const mascotas = [
 class App extends React.Component{
   state = {
     mascotas: mascotas
+  }
+  peticionGet = () =>{
+    axios.get(url).then(Response=>{
+      console.log(Response.mascotas);
+    })
+  }
+  componentDidMount(){
+    this.peticionGet();
   }
   render(){
     return(
