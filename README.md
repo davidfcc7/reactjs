@@ -1,6 +1,6 @@
 # reactjs
 ejercicios prácticos de reactjs
 
-instalacion: npm install -g create-react-app<br>
-crear carpeta: create-react-app hola-react<br>
-entramos a la carpeta creada e iniciamos react: npm run start
+crear carpeta: npx create-react-app hello-react<br>
+entrar a la carpera creada: cd hello-react
+entramos a la carpeta creada e iniciamos react: npm start
